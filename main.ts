@@ -6,12 +6,14 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onGesture(Gesture.Shake, function () {
     if (램프모드 == 1) {
-        램프상태 = 1
-        LED숫자 += 1
-        LED숫자 = LED숫자 % 4
-        basic.showNumber(LED숫자)
-        LED타이머 = 6
+        if (램프상태 == 0) {
+            램프상태 = 1
+        } else {
+            램프상태 = 0
+        }
     }
+    basic.showNumber(LED숫자)
+    LED타이머 = 6
 })
 input.onButtonPressed(Button.AB, function () {
     램프모드 = 0
