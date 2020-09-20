@@ -1,5 +1,5 @@
 {
-    "name": "moodlamp",
+    "name": "moodlampAdvanced",
     "description": "",
     "dependencies": {
         "core": "*",
