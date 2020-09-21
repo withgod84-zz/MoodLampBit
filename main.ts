@@ -36,11 +36,11 @@ let 램프모드 = 0
 let LED타이머 = 0
 let LED숫자 = 0
 basic.showNumber(LED숫자)
-let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)
+let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGBW)
 strip.setBrightness(100)
 basic.forever(function () {
     if (램프모드 == 2) {
-        if (input.lightLevel() < 60) {
+        if (input.lightLevel() < 25) {
             램프상태 = 1
         } else {
             램프상태 = 0
